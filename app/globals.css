@@ -34,7 +34,6 @@ body {
   width: 100%;
   margin: auto;
   overflow: hidden;
-  background-color: yellow;
 }
 
 @media (min-width: 2100px) {
@@ -55,14 +54,14 @@ body {
   }
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .container {
     max-width: 720px;
   }
-}
+} */
 
-@media (min-width: 576px) {
+/* @media (min-width: 576px) {
   .container {
     max-width: 540px;
   }
-}
+} */
