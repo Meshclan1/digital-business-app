@@ -1,7 +1,24 @@
+"use client";
 import "./Hero.css";
 import React from "react";
 import EmailBox from "../EmailBox/EmailBox";
 import { HeroData } from "@/src/utils/data";
+import { motion } from "framer-motion";
+
+const variants = (delay) => ({
+  initial: {
+    y: "18rem",
+  },
+  animate: {
+    y: "0rem",
+    transition: {
+      type: "spring",
+      damping: 25,
+      duration: 2.5,
+      delay,
+    },
+  },
+});
 
 const Hero = () => {
   return (
@@ -12,18 +29,30 @@ const Hero = () => {
             <div className="image-row">
               {HeroData.slice(0, 3).map((person, i) => (
                 <div className="person-pill" key={i}>
-                  <div className="person-pill-bg">
-                    <img src={person.src} alt="person" />
-                  </div>
+                  <motion.div
+                    initial={"initial"}
+                    animate={"animate"}
+                    variants={variants(person.delay)}
+                    style={{ backgroundColor: person.bg }}
+                    className="person-pill-bg"
+                  >
+                    <motion.img src={person.src} alt={person.src} />
+                  </motion.div>
                 </div>
               ))}
             </div>
             <div className="image-row">
               {HeroData.slice(3, 6).map((person, i) => (
                 <div className="person-pill" key={i}>
-                  <div className="person-pill-bg">
-                    <img src={person.src} alt="person" />
-                  </div>
+                  <motion.div
+                    initial={"initial"}
+                    animate={"animate"}
+                    variants={variants(person.delay)}
+                    style={{ backgroundColor: person.bg }}
+                    className="person-pill-bg"
+                  >
+                    <motion.img src={person.src} alt={person.src} />
+                  </motion.div>
                 </div>
               ))}
             </div>
