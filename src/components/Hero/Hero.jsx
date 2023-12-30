@@ -5,22 +5,36 @@ import EmailBox from "../EmailBox/EmailBox";
 import { HeroData } from "@/src/utils/data";
 import { motion } from "framer-motion";
 
-const variants = (delay) => ({
-  initial: {
-    y: "18rem",
-  },
-  animate: {
-    y: "0rem",
-    transition: {
-      type: "spring",
-      damping: 25,
-      duration: 2.5,
-      delay,
-    },
-  },
-});
-
 const Hero = () => {
+  const variants = (delay) => ({
+    initial: {
+      y: "18rem",
+    },
+    animate: {
+      y: "0rem",
+      transition: {
+        type: "spring",
+        damping: 25,
+        duration: 2.5,
+        delay,
+      },
+    },
+  });
+
+  const imgVariants = (delay) => ({
+    initial: {
+      y: "18rem",
+    },
+    animate: {
+      y: "0rem",
+      transition: {
+        type: "spring",
+        duration: 2,
+        stifness: 30,
+      },
+    },
+  });
+
   return (
     <div className="h-wrapper">
       <div className="container">
@@ -36,7 +50,13 @@ const Hero = () => {
                     style={{ backgroundColor: person.bg }}
                     className="person-pill-bg"
                   >
-                    <motion.img src={person.src} alt={person.src} />
+                    <motion.img
+                      initial={"initial"}
+                      animate={"animate"}
+                      variants={imgVariants()}
+                      src={person.src}
+                      alt={person.src}
+                    />
                   </motion.div>
                 </div>
               ))}
@@ -51,7 +71,13 @@ const Hero = () => {
                     style={{ backgroundColor: person.bg }}
                     className="person-pill-bg"
                   >
-                    <motion.img src={person.src} alt={person.src} />
+                    <motion.img
+                      initial={"initial"}
+                      animate={"animate"}
+                      variants={imgVariants()}
+                      src={person.src}
+                      alt={person.src}
+                    />
                   </motion.div>
                 </div>
               ))}
