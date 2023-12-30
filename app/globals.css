@@ -53,8 +53,8 @@ body {
     max-width: 960px;
   }
 }
-
-/* @media (min-width: 768px) {
+/* 
+@media (min-width: 768px) {
   .container {
     max-width: 720px;
   }
