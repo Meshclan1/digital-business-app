@@ -9,7 +9,7 @@ const EmailBox = () => {
   return (
     <motion.div
       initial={{ width: ".5rem", borderRadius: "100%" }}
-      whileInView={{
+      whileinview={{
         width: "70%",
         borderRadius: "999px",
         transition: {
@@ -22,7 +22,7 @@ const EmailBox = () => {
       <motion.div
         variants={containerVariants(0.6)}
         initial="offscreen"
-        whileInView={"onscreen"}
+        whileinview={"onscreen"}
         viewport={{ once: true }}
       >
         <LuMail size={30} color="grey" />
@@ -30,7 +30,7 @@ const EmailBox = () => {
       <motion.input
         variants={containerVariants(0.7)}
         initial="offscreen"
-        whileInView={"onscreen"}
+        whileinview={"onscreen"}
         viewport={{ once: true }}
         type="email"
         placeholder="Enter Email"
@@ -38,7 +38,7 @@ const EmailBox = () => {
       <motion.div
         variants={containerVariants(0.9)}
         initial="offscreen"
-        whileInView={"onscreen"}
+        whileinview={"onscreen"}
         viewport={{ once: true }}
         className="getFunded"
       >
