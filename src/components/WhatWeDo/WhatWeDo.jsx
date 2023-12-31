@@ -3,6 +3,13 @@ import "./WhatWeDo.css";
 import React from "react";
 import { features } from "@/src/utils/data";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import {
+  tagVariants,
+  desVariants,
+  titleVariants,
+  containerVariants,
+} from "@/src/utils/animations";
 
 const WhatWeDo = () => {
   return (
@@ -10,75 +17,142 @@ const WhatWeDo = () => {
       <div className="container">
         <div className="wwd-container">
           <div className="wwd-head">
-            <span className="tag">What we do:</span>
-            <span className="title">
+            <motion.span
+              initial="offscreen"
+              whileInView={"onscreen"}
+              variants={tagVariants}
+              className="tag"
+            >
+              What we do
+            </motion.span>
+            <motion.span
+              initial="offscreen"
+              whileInView={"onscreen"}
+              variants={titleVariants}
+              className="title"
+            >
               Empowering founders with non dilutive capital and expertise
-            </span>
-            <span className="des">Here is how we can evaluate</span>
+            </motion.span>
+            <motion.span
+              initial="offscreen"
+              whileInView={"onscreen"}
+              variants={desVariants}
+              className="des"
+            >
+              Here is how we can evaluate
+            </motion.span>
           </div>
           <div className="wwd-blocks">
             <div className="wwd-block">
-              <span className="sec-title">Blue Advances</span>
-              <span className="text">
+              <motion.span
+                initial="offscreen"
+                whileInView={"onscreen"}
+                variants={titleVariants}
+                className="sec-title"
+              >
+                Blue Advances
+              </motion.span>
+              <motion.span
+                initial="offscreen"
+                whileInView={"onscreen"}
+                variants={desVariants}
+                className="text"
+              >
                 Fund recurring growth expenses e.g. customer acquisition,
                 inventory
-              </span>
+              </motion.span>
 
               <div className="block-features">
                 {features.slice(0, 3).map((feature, i) => (
-                  <div className="block-feature" key={i}>
+                  <motion.div
+                    initial="offscreen"
+                    whileInView={"onscreen"}
+                    variants={containerVariants((i + 1) * 0.1)}
+                    className="block-feature"
+                    key={i}
+                  >
                     <Image
                       src={feature.icon}
                       alt="feature"
                       width={60}
                       height={60}
                     />
-                    <span>{feature.title}</span>
-                  </div>
+                    <motion.span>{feature.title}</motion.span>
+                  </motion.div>
                 ))}
               </div>
             </div>
             <div className="wwd-block">
-              <span className="sec-title">Blue Seed</span>
-              <span className="text">
+              <motion.span
+                initial="offscreen"
+                whileInView={"onscreen"}
+                variants={titleVariants}
+                className="sec-title"
+              >
+                Blue Seed
+              </motion.span>
+              <motion.span
+                initial="offscreen"
+                whileInView={"onscreen"}
+                variants={desVariants}
+                className="text"
+              >
                 Fund one-offs to scale e.g. product, hiring
-              </span>
+              </motion.span>
               <div className="block-features">
                 {features.slice(3, 6).map((feature, i) => (
-                  <div className="block-feature" key={i}>
+                  <motion.div
+                    initial="offscreen"
+                    whileInView={"onscreen"}
+                    variants={containerVariants((i + 1) * 0.1)}
+                    className="block-feature"
+                    key={i}
+                  >
                     <Image
                       src={feature.icon}
                       alt="feature"
                       width={60}
                       height={60}
                     />
-                    <span>{feature.title}</span>
-                  </div>
+                    <motion.span>{feature.title}</motion.span>
+                  </motion.div>
                 ))}
               </div>
             </div>
           </div>
-          <div className="wwd-support">
+          <motion.div
+            initial="offscreen"
+            whileInView={"onscreen"}
+            variants={containerVariants(0.3)}
+            className="wwd-support"
+          >
             <div>
-              <span className="sec-title">Blue Growth Support</span>
+              <span
+                initial="offscreen"
+                whileInView={"onscreen"}
+                variants={titleVariants}
+                className="sec-title"
+              >
+                Blue Growth Support
+              </span>
               <span className="des">
                 Data Insights & full stack expertise to supercharge growth
               </span>
             </div>
 
             <div>
-              <span className="text">
+              <motion.span className="text">
                 Actionable data insights by connecting revenue, marketing and
                 social media platforms
-              </span>
-              <span className="text">
+              </motion.span>
+              <motion.span className="text">
                 On demand execution expertise at cost or revenue share across
                 proposition design, engineering, marketing analytics,
                 partnerships, branding, intellectual property, market expansion,
                 and talent management
-              </span>
+              </motion.span>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
