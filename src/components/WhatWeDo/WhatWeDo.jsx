@@ -20,13 +20,13 @@ const WhatWeDo = () => {
             <div className="wwd-block">
               <span className="sec-title">Blue Advances</span>
               <span className="text">
-                Fund recurring growth expenses e.g. cusotmer acquisition,
+                Fund recurring growth expenses e.g. customer acquisition,
                 inventory
               </span>
 
               <div className="block-features">
                 {features.slice(0, 3).map((feature, i) => (
-                  <div key={i}>
+                  <div className="block-feature" key={i}>
                     <Image
                       src={feature.icon}
                       alt="feature"
@@ -45,7 +45,7 @@ const WhatWeDo = () => {
               </span>
               <div className="block-features">
                 {features.slice(3, 6).map((feature, i) => (
-                  <div key={i}>
+                  <div className="block-feature" key={i}>
                     <Image
                       src={feature.icon}
                       alt="feature"

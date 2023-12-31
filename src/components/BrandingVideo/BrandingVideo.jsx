@@ -7,7 +7,7 @@ const BrandingVideo = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end end"],
+    offset: ["startend", "end end"],
   });
 
   const scale = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
