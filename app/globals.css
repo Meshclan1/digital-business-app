@@ -31,7 +31,7 @@ body {
 }
 
 .container {
-  width: 100%;
+  width: 85%;
   margin: auto;
   overflow: hidden;
 }
@@ -53,8 +53,8 @@ body {
     max-width: 960px;
   }
 }
-/* 
-@media (min-width: 768px) {
+
+/* @media (min-width: 768px) {
   .container {
     max-width: 720px;
   }

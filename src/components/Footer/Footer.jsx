@@ -21,7 +21,7 @@ const Footer = () => {
 
           <hr />
 
-          <span className="text">Made by Ayo 😄</span>
+          <span className="text">Made by Ayo.M 😄</span>
         </div>
       </div>
     </div>

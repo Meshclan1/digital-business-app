@@ -5,6 +5,13 @@
   z-index: 999;
 }
 
+.sticky {
+  position: fixed;
+  box-shadow: 10px 12px 48px rgba(181, 187, 203, 0.206);
+  background: white;
+  top: 0;
+}
+
 .n-container {
   padding: 1.5rem 1rem;
   color: white;
@@ -12,6 +19,11 @@
   display: flex;
   justify-content: space-between;
   font-weight: 500;
+}
+
+.sticky .n-container {
+  color: var(--title-color);
+  padding: 1rem;
 }
 
 .n-logo {
@@ -89,7 +101,7 @@
   height: calc(100vh - 3.9rem);
 }
 
-.nm-menu span {
+.nm-menu a {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--border-color);
