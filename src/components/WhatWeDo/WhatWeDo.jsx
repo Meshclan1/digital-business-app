@@ -19,7 +19,7 @@ const WhatWeDo = () => {
           <div className="wwd-head">
             <motion.span
               initial="offscreen"
-              whileinview={"onscreen"}
+              whileInView={"onscreen"}
               variants={tagVariants}
               className="tag"
             >
@@ -27,7 +27,7 @@ const WhatWeDo = () => {
             </motion.span>
             <motion.span
               initial="offscreen"
-              whileinview={"onscreen"}
+              whileInView={"onscreen"}
               variants={titleVariants}
               className="title"
             >
@@ -35,7 +35,7 @@ const WhatWeDo = () => {
             </motion.span>
             <motion.span
               initial="offscreen"
-              whileinview={"onscreen"}
+              whileInView={"onscreen"}
               variants={desVariants}
               className="des"
             >
@@ -46,7 +46,7 @@ const WhatWeDo = () => {
             <div className="wwd-block">
               <motion.span
                 initial="offscreen"
-                whileinview={"onscreen"}
+                whileInView={"onscreen"}
                 variants={titleVariants}
                 className="sec-title"
               >
@@ -54,7 +54,7 @@ const WhatWeDo = () => {
               </motion.span>
               <motion.span
                 initial="offscreen"
-                whileinview={"onscreen"}
+                whileInView={"onscreen"}
                 variants={desVariants}
                 className="text"
               >
@@ -66,7 +66,7 @@ const WhatWeDo = () => {
                 {features.slice(0, 3).map((feature, i) => (
                   <motion.div
                     initial="offscreen"
-                    whileinview={"onscreen"}
+                    whileInView={"onscreen"}
                     variants={containerVariants((i + 1) * 0.1)}
                     className="block-feature"
                     key={i}
@@ -85,7 +85,7 @@ const WhatWeDo = () => {
             <div className="wwd-block">
               <motion.span
                 initial="offscreen"
-                whileinview={"onscreen"}
+                whileInView={"onscreen"}
                 variants={titleVariants}
                 className="sec-title"
               >
@@ -93,7 +93,7 @@ const WhatWeDo = () => {
               </motion.span>
               <motion.span
                 initial="offscreen"
-                whileinview={"onscreen"}
+                whileInView={"onscreen"}
                 variants={desVariants}
                 className="text"
               >
@@ -103,7 +103,7 @@ const WhatWeDo = () => {
                 {features.slice(3, 6).map((feature, i) => (
                   <motion.div
                     initial="offscreen"
-                    whileinview={"onscreen"}
+                    whileInView={"onscreen"}
                     variants={containerVariants((i + 1) * 0.1)}
                     className="block-feature"
                     key={i}
@@ -122,14 +122,14 @@ const WhatWeDo = () => {
           </div>
           <motion.div
             initial="offscreen"
-            whileinview={"onscreen"}
+            whileInView={"onscreen"}
             variants={containerVariants(0.3)}
             className="wwd-support"
           >
             <div>
               <span
                 initial="offscreen"
-                whileinview={"onscreen"}
+                whileInView={"onscreen"}
                 variants={titleVariants}
                 className="sec-title"
               >

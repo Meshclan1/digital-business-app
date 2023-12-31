@@ -1,5 +1,10 @@
+.wwi-wrapper {
+  background-color: var(--primary-color);
+}
+
 .wwi-wrapper .container {
-  padding-top: 13rem;
+  padding-top: 5rem;
+  padding-left: 2rem;
 }
 
 .wwi-container {
